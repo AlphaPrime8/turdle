@@ -1,0 +1,21 @@
+[package]
+name = "turdle-test"
+version = "0.1.0"
+rust-version = "1.59"
+edition = "2021"
+repository = "https://github.com/Ackee-Blockchain/trdelnik"
+license-file = "../../LICENSE"
+readme = "../../README.md"
+description = "The trdelnik_test crate helps you to write Rust tests for your programs with Trdelnik."
+
+[lib]
+proc-macro = true
+
+[dev-dependencies]
+macrotest = "1"
+
+[dependencies]
+syn = { version = "1.0", default-features = false }
+quote = { version = "1.0", default-features = false }
+proc-macro2 = { version = "1.0", default-features = false }
+darling = "0.13.1"
