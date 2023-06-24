@@ -2,6 +2,7 @@
 name = "turdle-client"
 version = "0.1.0"
 rust-version = "1.59"
+repository = "https://github.com/AlphaPrime8/turdle"
 edition = "2021"
 license-file = "../../LICENSE"
 readme = "../../README.md"
