@@ -1,6 +1,6 @@
 [package]
 name = "turdle-cli"
-version = "0.1.0"
+version = "0.1.1"
 rust-version = "1.59"
 repository = "https://github.com/AlphaPrime8/turdle"
 edition = "2021"
