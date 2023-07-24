@@ -1,6 +1,6 @@
 [package]
 name = "turdle-client"
-version = "0.1.0"
+version = "0.1.1"
 rust-version = "1.59"
 repository = "https://github.com/AlphaPrime8/turdle"
 edition = "2021"
@@ -24,7 +24,7 @@ solana-account-decoder = "~1.14.16"
 anchor-client = "=0.27.0"
 spl-token = "^3.5.0"
 spl-associated-token-account = "^1.0.3"
-tokio = { version = "~1.14.1", features = ["rt-multi-thread", "macros", "fs", "signal", "sync", "time", "io-util", "process"], default-features = false }
+tokio = { version = "1.28.2", features = ["rt-multi-thread", "macros", "fs", "signal", "sync", "time", "io-util", "process"], default-features = false }
 rand = "0.7.3"
 serde_json = "1.0.72"
 serde = "1.0.136"
