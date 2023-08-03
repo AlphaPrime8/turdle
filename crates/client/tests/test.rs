@@ -21,16 +21,16 @@ pub async fn generate_program_client() {
     ));
 
     let program_idl =
-        trdelnik_client::idl::parse_to_idl_program("turnstile".to_owned(), expanded_anchor_program)
+        turdle_client::idl::parse_to_idl_program("turnstile".to_owned(), expanded_anchor_program)
             .await?;
-    let idl = trdelnik_client::idl::Idl {
+    let idl = turdle_client::idl::Idl {
         programs: vec![program_idl],
     };
 
-    let use_modules: Vec<syn::ItemUse> = vec![syn::parse_quote! { use trdelnik_client::*; }];
+    let use_modules: Vec<syn::ItemUse> = vec![syn::parse_quote! { use turdle_client::*; }];
     let client_code =
-        trdelnik_client::program_client_generator::generate_source_code(idl, &use_modules);
-    let client_code = trdelnik_client::Commander::format_program_code(&client_code).await?;
+        turdle_client::program_client_generator::generate_source_code(idl, &use_modules);
+    let client_code = turdle_client::Commander::format_program_code(&client_code).await?;
 
     assert_str_eq!(client_code, expected_client_code);
 }

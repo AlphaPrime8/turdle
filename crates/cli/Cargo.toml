@@ -1,7 +1,7 @@
 [package]
 name = "turdle-cli"
 version = "0.1.1"
-rust-version = "1.59"
+rust-version = "1.69"
 repository = "https://github.com/AlphaPrime8/turdle"
 edition = "2021"
 license-file = "../../LICENSE"
@@ -15,4 +15,3 @@ anyhow = { version = "1.0.56", features = ["std"], default-features = false }
 fehler = { version = "1.0.0", default-features = false }
 solana-sdk = "~1.14.16"
 trdelnik-client = { path = "../client", package = "turdle-client" , version = "0.1.1"}
-trdelnik-explorer = { path = "../explorer", package = "turdle-explorer", version = "0.1.0"}

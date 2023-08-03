@@ -5,7 +5,6 @@ use fehler::throws;
 // subcommand functions to call and nested subcommands
 mod command;
 // bring nested subcommand enums into scope
-use command::ExplorerCommand;
 use command::KeyPairCommand;
 
 #[derive(Parser)]
@@ -36,11 +35,6 @@ enum Command {
     },
     /// Run local test validator
     Localnet,
-    /// The Hacker's Explorer
-    Explorer {
-        #[clap(subcommand)]
-        subcmd: ExplorerCommand,
-    },
     /// Initialize test environment
     Init,
 }
@@ -54,7 +48,6 @@ pub async fn start() {
         Command::KeyPair { subcmd } => command::keypair(subcmd)?,
         Command::Test { root } => command::test(root).await?,
         Command::Localnet => command::localnet().await?,
-        Command::Explorer { subcmd } => command::explorer(subcmd).await?,
         Command::Init => command::init().await?,
     }
 }
